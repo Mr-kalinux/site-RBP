@@ -1,0 +1,74 @@
+/* --- Réinitialisation basique --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Corps de la page --- */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("image/portfoliofond.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #0D1117; /* Sécurité si l'image ne charge pas */
+}
+
+/* --- Conteneur principal --- */
+.imagefond {
+    background-color: rgba(22, 27, 34, 0.85); /* Fond sombre semi-transparent */
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    width: 80%;
+    max-width: 700px;
+    border: 1px solid #30363D; /* Bordure subtile */
+    backdrop-filter: blur(6px); /* Effet vitre moderne */
+}
+
+/* --- Titre principal --- */
+h1 {
+    color: #3B82F6; /* Bleu moderne */
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5); /* Effet glow léger */
+}
+
+/* --- Menu des liens --- */
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- Liens stylisés --- */
+.menu a {
+    display: block;
+    background-color: #3B82F6; /* Couleur d’accent */
+    color: #E6EDF3; /* Texte clair */
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(59, 130, 246, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- Effet au survol --- */
+.menu a:hover {
+    background-color: #1E40AF; /* Bleu plus foncé */
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(59, 130, 246, 0.6);
+}
+
+/* --- Animation subtile au clic --- */
+.menu a:active {
+    transform: scale(0.97);
+}

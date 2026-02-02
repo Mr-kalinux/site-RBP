@@ -1,0 +1,266 @@
+/* =========================================================
+   🔹 RÉINITIALISATION GLOBALE
+========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   🔹 CONFIGURATION DU BODY
+========================================================= */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #0D1117;
+    color: #E6EDF3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* =========================================================
+   🔹 BLOCS PRINCIPAUX
+========================================================= */
+.container,
+.competences-container {
+    background-color: #1E1E1E; /* Fond sombre */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow:
+        0 0 8px #3B82F6,
+        0 0 12px #3B82F6;
+    width: 90%;
+    max-width: 1100px;
+    text-align: center;
+    border: 1px solid #30363D;
+    backdrop-filter: blur(6px);
+    margin-bottom: 40px;
+    animation: softPulse 2.5s infinite ease-in-out;
+}
+
+@keyframes softPulse {
+    0%, 100% {
+        box-shadow:
+            0 0 6px #3B82F6,
+            0 0 10px #3B82F6;
+    }
+    50% {
+        box-shadow:
+            0 0 10px #3B82F6,
+            0 0 16px #3B82F6;
+    }
+}
+
+/* =========================================================
+   🔹 TITRES PRINCIPAUX
+========================================================= */
+.container h1,
+.competences-container h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, #3B82F6, #06B6D4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
+}
+
+/* =========================================================
+   🔹 CARTES D'INFORMATIONS & COMPÉTENCES
+========================================================= */
+.cards,
+.competences-grid {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.cards {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.competences-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.card,
+.competence-box {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border: 2px solid #3B82F6;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover,
+.competence-box:hover {
+    transform: translateY(-5px);
+    background-color: rgba(59, 130, 246, 0.08);
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+}
+
+.competence-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #3B82F6;
+}
+
+/* =========================================================
+   🔹 MODALES
+========================================================= */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #161B22;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.8);
+    position: relative;
+    border: 1px solid #30363D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content h3 {
+    color: #3B82F6;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.modal-content .modal-text {
+    display: none;
+}
+
+/* Bouton fermer */
+.close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 28px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #3B82F6;
+}
+
+/* =========================================================
+   🔹 CARROUSEL
+========================================================= */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+    margin-top: 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-images img {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    object-fit: contain;
+    background-color: #000;
+    border-radius: 10px;
+    user-select: none;
+}
+
+/* Boutons navigation */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 28px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: #3B82F6;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* =========================================================
+   🔹 BOUTON RETOUR
+========================================================= */
+.back-btn {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-btn a {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #3B82F6, #06B6D4);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 3px 10px rgba(59, 130, 246, 0.4);
+}
+
+.back-btn a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.5);
+}

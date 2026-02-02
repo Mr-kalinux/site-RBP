@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body style="display: flex; justify-content: center; align-items: center; min-height: 100vh; flex-direction: column;">
+
+  <!-- SECTION: Compétences -->
+  <section class="competences-container" aria-labelledby="competences-title" style="width: 100%; max-width: 1100px;">
+    <h2 id="competences-title" style="text-align: center;">Compétences mobilisées</h2>
+
+    <div class="competences-grid" style="width: 100%; margin: 0 auto;">
+      <!-- 1 -->
+      <button class="competence-box" data-modal="modal-patrimoine" type="button" style="min-height: 220px; display: flex; flex-direction: column; justify-content: center;">
+        <h3 class="competence-title" style="text-align: center;">Gérer le patrimoine informatique</h3>
+        <p class="competence-text" style="text-align: center;">Recensement, gestion des actifs, sauvegarde et contrôle.</p>
+      </button>
+
+      <!-- 2 -->
+      <button class="competence-box" data-modal="modal-incidents" type="button" style="min-height: 220px; display: flex; flex-direction: column; justify-content: center;">
+        <h3 class="competence-title" style="text-align: center;">Répondre aux incidents et demandes</h3>
+        <p class="competence-text" style="text-align: center;">Collecte, diagnostic et résolution des demandes.</p>
+      </button>
+
+      <!-- 3 -->
+      <button class="competence-box" data-modal="modal-presence" type="button" style="min-height: 220px; display: flex; flex-direction: column; justify-content: center;">
+        <h3 class="competence-title" style="text-align: center;">Développer la présence en ligne</h3>
+        <p class="competence-text" style="text-align: center;">Valorisation numérique, CMS, visibilité et site web.</p>
+      </button>
+
+      <!-- 4 -->
+      <button class="competence-box" data-modal="modal-projet" type="button" style="min-height: 220px; display: flex; flex-direction: column; justify-content: center;">
+        <h3 class="competence-title" style="text-align: center;">Travailler en mode projet</h3>
+        <p class="competence-text" style="text-align: center;">Planification, suivi, livrables et communication.</p>
+      </button>
+
+      <!-- 5 -->
+      <button class="competence-box" data-modal="modal-service" type="button" style="min-height: 220px; display: flex; flex-direction: column; justify-content: center;">
+        <h3 class="competence-title" style="text-align: center;">Mettre à disposition une service informatique</h3>
+        <p class="competence-text" style="text-align: center;">Tests d'intégration, déploiement et accompagnement.</p>
+      </button>
+
+      <!-- 6 -->
+      <button class="competence-box" data-modal="modal-developpement" type="button" style="min-height: 220px; display: flex; flex-direction: column; justify-content: center;">
+        <h3 class="competence-title" style="text-align: center;">Organiser son développement professionnel</h3>
+        <p class="competence-text" style="text-align: center;">Veille, identité pro et plan de formation.</p>
+      </button>
+    </div>
+
+
+  </section>
+
+
+  </main>
+
+  <!-- ========== MODALES (1 par compétence) ========== -->
+  <!-- Remarque : remplace les images par les tiennes dans le dossier images/ -->
+
+  <!-- MODALE: Patrimoine -->
+  <div class="modal" id="modal-patrimoine" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-labelledby="patrimoine-title">
+      <button class="close" aria-label="Fermer la fenêtre">&times;</button>
+      <h3 id="patrimoine-title">Gérer le patrimoine informatique</h3>
+      <p class="modal-text">Exemples : inventaire GLPI, plan de sauvegarde, supervision.</p>
+
+      <div class="carousel">
+        <button class="prev" aria-label="Image précédente">&#10094;</button>
+        <div class="carousel-images">
+          <img src="images/etiquette-excel.png" alt="Inventaire matériel 1">
+          <img src="images/excel-inventaire.png" alt="GLPI fiche matériel">
+          <img src="image/patrimoine3.png" alt="Supervision écran">
+        </div>
+        <button class="next" aria-label="Image suivante">&#10095;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODALE: Incidents -->
+  <div class="modal" id="modal-incidents" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-labelledby="incidents-title">
+      <button class="close" aria-label="Fermer la fenêtre">&times;</button>
+      <h3 id="incidents-title">Répondre aux incidents et demandes</h3>
+      <p class="modal-text">Traitement de tickets, diagnostic, message au client, traçabilité.</p>
+
+      <div class="carousel">
+        <button class="prev" aria-label="Image précédente">&#10094;</button>
+        <div class="carousel-images">
+          <img src="images/incidents1.jpg" alt="Ticket système">
+          <img src="images/incidents2.jpg" alt="Diagnostic réseau">
+          <img src="images/incidents3.jpg" alt="Intervention sur poste">
+        </div>
+        <button class="next" aria-label="Image suivante">&#10095;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODALE: Présence en ligne -->
+  <div class="modal" id="modal-presence" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-labelledby="presence-title">
+      <button class="close" aria-label="Fermer la fenêtre">&times;</button>
+      <h3 id="presence-title">Développer la présence en ligne</h3>
+      <p class="modal-text">Hébergement, DNS, mentions légales, visibilité et évolution du site.</p>
+
+      <div class="carousel">
+        <button class="prev" aria-label="Image précédente">&#10094;</button>
+        <div class="carousel-images">
+          <img src="images/presence1.jpg" alt="Site vitrine">
+          <img src="images/presence2.jpg" alt="Gestion DNS">
+          <img src="images/presence3.jpg" alt="Pipeline CI/CD">
+        </div>
+        <button class="next" aria-label="Image suivante">&#10095;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODALE: Projet -->
+  <div class="modal" id="modal-projet" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-labelledby="projet-title">
+      <button class="close" aria-label="Fermer la fenêtre">&times;</button>
+      <h3 id="projet-title">Travailler en mode projet</h3>
+      <p class="modal-text">Analyse des besoins, planning, découpage en tâches, documentation.</p>
+
+      <div class="carousel">
+        <button class="prev" aria-label="Image précédente">&#10094;</button>
+        <div class="carousel-images">
+          <img src="images/projet1.jpg" alt="Board Kanban">
+          <img src="images/projet2.jpg" alt="Planning projet">
+          <img src="images/projet3.jpg" alt="Livrable">
+        </div>
+        <button class="next" aria-label="Image suivante">&#10095;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODALE: Mettre à disposition un service -->
+  <div class="modal" id="modal-service" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-labelledby="service-title">
+      <button class="close" aria-label="Fermer la fenêtre">&times;</button>
+      <h3 id="service-title">Mettre à disposition un service informatique</h3>
+      <p class="modal-text">Tests d'intégration, déploiement, documentation et accompagnement utilisateurs.</p>
+
+      <div class="carousel">
+        <button class="prev" aria-label="Image précédente">&#10094;</button>
+        <div class="carousel-images">
+          <img src="images/worflow1.png" alt="Test d'intégration">
+          <img src="images/workflow2.png" alt="Déploiement">
+          <img src="images/service3.jpg" alt="Support et aide">
+        </div>
+        <button class="next" aria-label="Image suivante">&#10095;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODALE: Organiser son développement professionnel -->
+  <div class="modal" id="modal-developpement" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="develop-title">
+      <button class="close" aria-label="Fermer la fenêtre">&times;</button>
+      <h3 id="develop-title">Organiser son développement professionnel</h3>
+      <p class="modal-text">Veille, environnement d'apprentissage, identité professionnelle, projet pro.</p>
+
+      <div class="carousel">
+        <button class="prev" aria-label="Image précédente">&#10094;</button>
+        <div class="carousel-images">
+          <img src="images/dev1.jpg" alt="Veille technologique">
+          <img src="images/dev2.jpg" alt="Formation">
+          <img src="images/dev3.jpg" alt="Profil professionnel">
+        </div>
+        <button class="next" aria-label="Image suivante">&#10095;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER / BOUTON RETOUR -->
+  <footer class="site-footer">
+    <div class="back-btn">
+      <a href="../index.html">⬅ Retour à l'accueil</a>
+    </div>
+  </footer>
+  <!-- SCRIPT -->
+  <script src="stage1.js" defer></script>
+
+</body>
+</html>
