@@ -237,10 +237,302 @@ nav a.active::after {
 
 /* ===== PORTFOLIO PAGE ===== */
 .portfolio-section {
-    padding: 4rem 0;
+    padding: 4rem 2rem;
+    background: radial-gradient(circle at top, rgba(108, 92, 231, 0.18), rgba(26, 26, 46, 1));
+    border-radius: 24px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 25% 20%, rgba(255, 193, 7, 0.18), transparent 60%),
+                radial-gradient(circle at 85% 40%, rgba(108, 92, 231, 0.14), transparent 55%);
+    pointer-events: none;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(108, 92, 231, 0.4), transparent 55%);
+    filter: blur(28px);
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover::before {
+    transform: translate(30px, 30px);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+    border-color: rgba(108, 92, 231, 0.35);
+}
+
+.project-card h3 {
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
+    z-index: 1;
+}
+
+.project-card p {
+    color: var(--secondary);
+    line-height: 1.6;
+    margin-bottom: 1.6rem;
+    z-index: 1;
+}
+
+.project-card .btn {
+    z-index: 1;
+}
+
+/* ===== MODAL PDF ===== */
+.pdf-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    z-index: 999;
+}
+
+.pdf-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.pdf-modal-content {
+    background: rgba(26, 26, 46, 0.95);
+    border-radius: 18px;
+    width: 90%;
+    max-width: 1080px;
+    height: 85%;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+    display: flex;
+    flex-direction: column;
+}
+
+.pdf-modal-header {
+    padding: 1.25rem 1.75rem;
+    background: linear-gradient(135deg, var(--accent), var(--danger));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pdf-modal-title {
+    margin: 0;
+    font-size: 1.25rem;
+    color: white;
+    font-weight: 700;
+}
+
+.close-pdf-modal {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: white;
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.25s ease;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.close-pdf-modal:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.pdf-viewer {
+    width: 100%;
+    height: calc(100% - 72px);
+    border: none;
+    background: #181a2b;
+}
+
+/* ===== MODAL DÉMO CALCULATRICE ===== */
+.demo-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    z-index: 1000;
+}
+
+.demo-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.demo-modal-content {
+    background: rgba(24, 26, 43, 0.95);
+    border-radius: 18px;
+    width: 95%;
+    max-width: 600px;
+    max-height: 80vh;
+    padding: 1.5rem;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.demo-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.demo-modal-title {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.close-demo-modal {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.25s ease;
+    font-size: 1.2rem;
+}
+
+.close-demo-modal:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-height: 450px;
+    max-height: 600px;
+}
+
+.calculator-terminal {
+    flex: 1;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 12px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.95);
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.calculator-form {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 0.75rem;
+    align-items: stretch;
+}
+
+.calculator-input {
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    padding: 0.7rem 0.9rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+.calculator-input:focus {
+    border-color: rgba(108, 92, 231, 0.8);
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.18);
+}
+
+.btn-help {
+    padding: 0.7rem 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(108, 92, 231, 0.6);
+    background: rgba(108, 92, 231, 0.15);
+    color: var(--accent);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-weight: 600;
+}
+
+.btn-help:hover {
+    background: rgba(108, 92, 231, 0.28);
+    border-color: var(--accent);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .section-title {
+
     font-size: 2.5rem;
     margin-bottom: 3rem;
     text-align: center;
@@ -386,9 +678,9 @@ nav a.active::after {
 }
 
 .gallery-image-container {
-    max-width: 600px;
+    max-width: 90vw;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: auto;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
@@ -396,7 +688,7 @@ nav a.active::after {
 
 .gallery-image-container img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: contain;
     background-color: var(--border);
 }
@@ -473,6 +765,142 @@ nav a.active::after {
     color: var(--accent);
     transform: rotate(90deg);
 }
+
+.back-gallery-modal {
+    position: absolute;
+    left: 1.5rem;
+    top: 1.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--secondary);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.back-gallery-modal:hover {
+    color: var(--accent);
+    background: var(--bg-hover);
+    transform: translateX(-2px);
+}
+
+/* ===== GRILLE DE PROJETS ===== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent);
+}
+
+.project-card h3 {
+    margin: 0 0 1rem 0;
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.project-card p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* ===== PRÉSENTATION VERTICALE DU PROJET ===== */
+.project-presentation {
+    max-height: 72vh;
+    overflow-y: auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-left: 4px solid var(--accent);
+    background: rgba(26, 26, 46, 0.90);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.presentation-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(37, 37, 63, 0.75) 0%, rgba(35, 37, 56, 0.45) 100%);
+    border: 1px solid rgba(108, 92, 231, 0.35);
+    border-radius: 16px;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.32);
+    margin-bottom: 1.7rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.presentation-slide:hover {
+    transform: translateY(-3px);
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.32), 0 8px 20px rgba(0,0,0,0.18);
+}
+
+.presentation-meta {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.presentation-label {
+    background: var(--accent);
+    color: var(--secondary);
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    letter-spacing: 0.02rem;
+    text-transform: uppercase;
+}
+
+.presentation-meta h3 {
+    margin: 0;
+    color: var(--accent-light);
+    font-size: 1rem;
+}
+
+.presentation-image {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.presentation-description {
+    text-align: left;
+    color: var(--secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0.25rem 0;
+}
+
 
 /* ===== GALERIE D'IMAGES DANS MODAL ===== */
 .modal-image-gallery {
@@ -1158,10 +1586,12 @@ footer {
 }
 
 .cert-date {
-    color: var(--accent-light);
-    font-size: 0.9rem;
-    font-weight: 500;
-}
+        display: block;
+        color: var(--accent-light);
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-top: 0.3rem;
+    }
 
 .cert-description {
     color: var(--secondary);
@@ -1305,13 +1735,7 @@ footer {
 }
 
 /* Certification et date */
-.cert-date {/* Lines 1175-1180 omitted */}
-    display: block;
-    color: var(--accent-light);
-    font-size: 0.85rem;
-    font-weight: normal;
-    margin-top: 0.3rem;
-}
+/* (Styles appliqués dans le bloc .cert-date ci-dessus) */
 
 /* Responsive accordéons */
 @media (max-width: 768px) {
