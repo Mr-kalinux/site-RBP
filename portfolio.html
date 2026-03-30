@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mes Projets</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="../index.html" class="nav-link">Accueil</a></li>
+            <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+            <li><a href="projet.html" class="nav-link">Projets</a></li>
+            <li><a href="competences.html" class="nav-link">Compétences</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Section Portfolio -->
+        <section class="portfolio-section">
+            <h2 class="section-title">Mon Portfolio</h2>
+            
+            <h3 style="color: var(--accent); margin-bottom: 2rem; text-align: center;">Cliquez sur une compétence pour voir les projets associés</h3>
+            <p class="section-note" style="text-align: center; color: var(--accent-light); margin-bottom: 1.5rem;">
+                Note : certaines compétences n'ont pas encore d'images associées — mon deuxième stage n'a pas encore eu lieu. J'attends ce stage pour ajouter des photos et des descriptions.
+            </p>
+            
+            <!-- Grille de Compétences Cliquables -->
+            <div class="skills-grid-columns">
+                <div class="skill-card" onclick="openGalleryModal('patrimoine')">
+                    <div class="skill-info">
+                        <div class="skill-name">Gérer le patrimoine informatique</div>
+                    </div>
+                </div>
+
+                <div class="skill-card" onclick="openGalleryModal('incidents')">
+                    <div class="skill-info">
+                        <div class="skill-name">Répondre aux incidents et aux demandes d'assistance et d'évolution</div>
+                    </div>
+                </div>
+
+                <div class="skill-card" onclick="openGalleryModal('presence')">
+                    <div class="skill-info">
+                        <div class="skill-name">Développer la présence en ligne de l'organisation</div>
+                    </div>
+                </div>
+
+                <div class="skill-card" onclick="openGalleryModal('projet')">
+                    <div class="skill-info">
+                        <div class="skill-name">Travail en mode projet</div>
+                    </div>
+                </div>
+
+                <div class="skill-card" onclick="openGalleryModal('service')">
+                    <div class="skill-info">
+                        <div class="skill-name">Mettre à disposition des utilisateurs un service informatique</div>
+                    </div>
+                </div>
+
+                <div class="skill-card" onclick="openGalleryModal('developpement')">
+                    <div class="skill-info">
+                        <div class="skill-name">Organiser son développement professionnel</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal pour la Galerie avec Navigation -->
+    <div id="galleryModal" class="gallery-modal">
+        <div class="gallery-modal-content">
+            <button class="back-gallery-modal" onclick="backToProjects()" style="display:none;">&larr; Retour</button>
+            <button class="close-gallery-modal" onclick="closeGalleryModal()">&times;</button>
+            <h2 id="galleryTitle" class="gallery-modal-title">Titre</h2>
+            <p id="galleryDescription" class="gallery-modal-description"></p>
+            
+            <div class="gallery-viewer">
+                <button class="gallery-arrow gallery-arrow-left" onclick="prevImage()">&lt;</button>
+                <div class="gallery-image-container">
+                    <img id="galleryImage" src="" alt="Projet">
+                </div>
+                <button class="gallery-arrow gallery-arrow-right" onclick="nextImage()">&gt;</button>
+            </div>
+            
+            <div class="gallery-indicators" id="galleryIndicators"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Robin BARBAT-PATINAUD. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
