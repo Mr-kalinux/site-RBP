@@ -20,24 +20,60 @@
 
     <!-- Contenu Principal -->
     <div class="container">
-        <section class="dev-section">
-            <div class="dev-container">
-                <h2 class="dev-title">Projets</h2>
-                <div class="dev-card">
-                    <div class="construction-icon">
-                        <div class="beacon"></div>
-                    </div>
-                    <h3>Page en Développement</h3>
-                    <p>Cette page est actuellement en cours de développement.</p>
-                    <p class="dev-message">Du contenu arrivera très vite !</p>
-                    <div class="loading-dots">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+        <section class="portfolio-section">
+            <h2 class="section-title">Mes Projets</h2>
+            <p class="disclaimer">Tous les projets présentés ici sont des projets personnels et n'ont aucun lien avec des projets réalisés en cours.</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Configuration Proxmox</h3>
+                    <p>Projet de configuration et déploiement d'un serveur Proxmox pour la virtualisation. Ce projet couvre l'installation, la configuration des machines virtuelles et la gestion des ressources.</p>
+                    <button type="button" class="btn" onclick="openPdfModal('../projet/config-proxmox.pdf', 'Configuration Proxmox')">Voir le PDF</button>
+                </div>
+                <div class="project-card">
+                    <h3>Configuration VPN</h3>
+                    <p>Mise en place d'un réseau privé virtuel (VPN) pour sécuriser les connexions. Ce projet détaille la configuration d'un serveur VPN, les protocoles utilisés et les bonnes pratiques de sécurité.</p>
+                    <button type="button" class="btn" onclick="openPdfModal('../projet/config-VPN.pdf', 'Configuration VPN')">Voir le PDF</button>
+                </div>
+                <div class="project-card">
+                    <h3>Calculatrice (Python)</h3>
+                    <p>Une calculatrice en Python (interface CLI) disponible sur GitHub. Pour voir le code source, explorer le dépôt, ou tester une version de démonstration, cliquez sur les boutons ci-dessous.</p>
+                    <div class="project-actions">
+                        <button type="button" class="btn" onclick="openCalculatorDemo()">Voir la démo</button>
+                        <a href="https://github.com/Mr-kalinux/Calculatrice-python/tree/V2" target="_blank" class="btn btn-secondary">Voir sur GitHub</a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Modal de prévisualisation PDF -->
+        <div id="pdfModal" class="pdf-modal" role="dialog" aria-modal="true" aria-labelledby="pdfModalTitle">
+            <div class="pdf-modal-content">
+                <div class="pdf-modal-header">
+                    <h3 id="pdfModalTitle" class="pdf-modal-title">Prévisualisation</h3>
+                    <button class="close-pdf-modal" aria-label="Fermer" onclick="closePdfModal()">×</button>
+                </div>
+                <iframe id="pdfViewer" class="pdf-viewer" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Modal Démo calculatrice -->
+        <div id="calculatorModal" class="demo-modal" role="dialog" aria-modal="true" aria-labelledby="calculatorModalTitle">
+            <div class="demo-modal-content">
+                <div class="demo-modal-header">
+                    <h3 id="calculatorModalTitle" class="demo-modal-title">Démo calculatrice</h3>
+                    <button class="close-demo-modal" aria-label="Fermer" onclick="closeCalculatorDemo()">×</button>
+                </div>
+                <div class="calculator">
+                    <div class="calculator-terminal" id="calculatorTerminal"></div>
+                    <form id="calculatorForm" class="calculator-form">
+                        <label for="calculatorInput" class="sr-only">Commande</label>
+                        <input id="calculatorInput" class="calculator-input" type="text" autocomplete="off" placeholder="Tapez une commande (ex: C, E, S, D, DIV, Q)" />
+                        <button type="submit" class="btn btn-secondary">Envoyer</button>
+                        <button type="button" class="btn btn-help" onclick="showCalculatorHelp()">Aide</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Footer -->
