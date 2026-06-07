@@ -693,6 +693,12 @@ nav a.active::after {
     background-color: var(--border);
 }
 
+/* Classe pour corriger l'orientation des images mal pivotées */
+.gallery-image-container img.rotate-correct {
+    transform: rotate(90deg);
+    transition: transform 0.25s ease;
+}
+
 .gallery-arrow {
     background-color: var(--accent);
     color: white;

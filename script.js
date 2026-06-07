@@ -25,19 +25,24 @@ const galleriesData = {
         description: 'Gestion, inventaire et maintenance du parc informatique',
         projects: [
             {
-                name: 'Réalisation de l\'inventaire du matériel informatique',
-                description: 'Réalisation d\'un inventaire complet des équipements informatiques de l\'entreprise',
+                name: 'Réalisation d\'un inventaire informatique',
+                description: 'Via l\'outil Excel et des étiquettes, l\'ensemble du matériel informatique a été référencé.',
                 images: [
-                    { src: '../assets/images/patrimoine1.jpg', alt: 'Inventaire 1' },
-                    { src: '../assets/images/patrimoine2.jpg', alt: 'Inventaire 2' }
+                    { src: '../projet-stage/inventaire/plan-rdc.png', alt: 'Plan RDC', caption: 'Plan RDC — localisation des équipements et des postes.' },
+                    { src: '../projet-stage/inventaire/plan-étage.png', alt: 'Plan étage', caption: 'Plan étage — répartition des postes par service.' },
+                    { src: '../projet-stage/inventaire/liste-complète.png', alt: 'Liste complète', caption: 'Liste complète exportée depuis Excel contenant l\'inventaire.' },
+                    { src: '../projet-stage/inventaire/liste-ecran-portable.png', alt: 'Liste écrans portables', caption: 'Détail des écrans portables identifiés et leurs caractéristiques.' },
+                    { src: '../projet-stage/inventaire/liste-précise.png', alt: 'Liste précise', caption: 'Fiche précise avec numéros d\'étiquettes et informations techniques.' },
+                    { src: '../projet-stage/inventaire/exemple-étiquette.jpg', alt: 'Exemple étiquette', caption: 'Exemple d\'étiquette utilisée pour l\'inventaire.' }
                 ]
             },
             {
-                name: 'Changement de poste',
-                description: 'Réalisation du déménagement et de la configuration des postes utilisateurs',
+                name: 'Changement de poste dû à leur ancienneté',
+                description: 'Des postes nécessitaient une modernisation ; de nouveaux PC ont été installés.',
                 images: [
-                    { src: '../projet-stage/changement-poste/changement-poste-1.jpg', alt: 'Changement de poste 1', caption: 'Démontage et migration d\'un poste vers son nouvel emplacement.' },
-                    { src: '../projet-stage/changement-poste/changement-poste-2.jpg', alt: 'Changement de poste 2', caption: 'Reconnexion, tests et validation de la nouvelle configuration.' }
+                    { src: '../projet-stage/changement-poste/ancien-pc.jpg', alt: 'Ancien PC', caption: 'Ancien PC — état avant remplacement.' },
+                    { src: '../projet-stage/changement-poste/nouveau-pc.jpg', alt: 'Nouveau PC', caption: 'Nouveau PC — modèle installé pour moderniser le poste.' },
+                    { src: '../projet-stage/changement-poste/install-windows-avec-données.jpg', alt: 'Installation Windows', caption: 'Installation de Windows avec migration des données et configuration finale.' }
                 ]
             }
         ]
@@ -47,11 +52,11 @@ const galleriesData = {
         description: 'Support utilisateur et gestion des incidents informatiques',
         projects: [
             {
-                name: 'Changement de poste',
-                description: 'Réalisation du déménagement et de la configuration des postes utilisateurs',
+                name: 'Test de connectique',
+                description: 'Test de connectique entre deux points reliés par un câble sous terre.',
                 images: [
-                    { src: '../projet-stage/changement-poste/changement-poste-1.jpg', alt: 'Changement de poste 1', caption: 'Démontage et migration d’un poste vers son nouvel emplacement.' },
-                    { src: '../projet-stage/changement-poste/changement-poste-2.jpg', alt: 'Changement de poste 2', caption: 'Reconnexion, tests et validation de la nouvelle configuration.' }
+                    { src: '../projet-stage/test-connectic/batiment-relier-cable-sous-terre.png', alt: 'Bâtiments reliés par câble sous terre', caption: 'Repérage des deux bâtiments reliés par le câblage enterré.' },
+                    { src: '../projet-stage/test-connectic/test-connect.jpg', alt: 'Test de connexion', caption: 'Vérification de la connectivité entre les deux points du réseau.' }
                 ]
             },
             {
@@ -65,32 +70,32 @@ const galleriesData = {
                 ]
             },
             {
-                name: 'Préparation de poste pour client',
-                description: 'Préparation complète de postes de travail avec installation automatisée',
+                name: 'Changement de poste dû à leur ancienneté',
+                description: 'Des postes nécessitaient une modernisation ; de nouveaux PC ont été installés.',
                 images: [
-                    { src: '../projet-stage/Préparation-postes/pc-prépa.jpg', alt: 'pc-prépa', caption: 'installation du pc à préparer' },
-                    { src: '../projet-stage/Préparation-postes/install-windows-neuf.jpg', alt: 'install-windows-neuf', caption: 'installation de Windows 11 pro à partir d\'une clé dédicacé avec un script pour passer les étapes d\'authentification' },
-                    { src: '../projet-stage/Préparation-postes/script-execution.jpg', alt: 'script-execution', caption: 'une fois Windows installé le script continus pour installer une liste d\'application utile' },
-                    { src: '../projet-stage/Préparation-postes/script-install.jpg', alt: 'script-install', caption: 'script PowerShell qui permet d\'automatiser l\'installation des applications' },
-                    { src: '../projet-stage/Préparation-postes/maj-windows.jpg', alt: 'maj-windows', caption: 'faire toutes les mises à jours Windows pour que les pc soient sur les dernières versions' },
-                    { src: '../projet-stage/Préparation-postes/maj-BIOS.jpg', alt: 'maj-BIOS', caption: 'faire les mises à jour du BIOS' },
-                    { src: '../projet-stage/Préparation-postes/maj-driver.jpg', alt: 'maj-driver', caption: 'installer toutes les dernières versions des pilotes' }
+                    { src: '../projet-stage/changement-poste/ancien-pc.jpg', alt: 'Ancien PC', caption: 'Ancien PC — état avant remplacement.' },
+                    { src: '../projet-stage/changement-poste/nouveau-pc.jpg', alt: 'Nouveau PC', caption: 'Nouveau PC — modèle installé pour moderniser le poste.' },
+                    { src: '../projet-stage/changement-poste/install-windows-avec-données.jpg', alt: 'Installation Windows', caption: 'Installation de Windows avec migration des données et configuration finale.' }
                 ]
             },
             {
-                name: 'Test de connectivité',
-                description: 'Contrôle de la qualité et de la disponibilité du réseau',
+                name: 'Hashcat',
+                description: 'Un fichier Excel bloqué par un mot de passe devait être débloqué. Après des tentatives classiques sans résultat, une solution de contournement a été testée avec Hashcat.',
                 images: [
-                    { src: '../projet-stage/test-connectic/test-connectivite-1.jpg', alt: 'Test connectivité 1', caption: 'Utilisation de testeurs réseau pour valider les câbles et équipements.' },
-                    { src: '../projet-stage/test-connectic/test-connectivite-2.jpg', alt: 'Test connectivité 2', caption: 'Validation de la connexion internet et du VLAN.' }
+                    { src: '../projet-stage/hashcat/fichier-excel.jpg', alt: 'Fichier Excel protégé', caption: 'Fichier source protégé par mot de passe à analyser.' },
+                    { src: '../projet-stage/hashcat/outil-pour-bon-paramètres.jpg', alt: 'Paramétrage de l\'outil', caption: 'Sélection des bons paramètres pour lancer l\'attaque de récupération.' },
+                    { src: '../projet-stage/hashcat/exec-hashcat.jpg', alt: 'Exécution de Hashcat', caption: 'Lancement de Hashcat et suivi de la progression de la recherche.' }
                 ]
             },
             {
-                name: 'Transfert de données',
-                description: 'Migration sécurisée des données des anciens postes vers les nouveaux',
+                name: 'Brassage',
+                description: 'L\'infrastructure d\'un garage avait besoin d\'une remise en état et d\'une évolution de son réseau.',
                 images: [
-                    { src: '../projet-stage/transfert-donnée/transfert-donnees-1.jpg', alt: 'Transfert données 1', caption: 'Configuration des sauvegardes et transfert initial via réseau local.' },
-                    { src: '../projet-stage/transfert-donnée/transfert-donnees-2.jpg', alt: 'Transfert données 2', caption: 'Validation finale et vérification de l\'intégrité des fichiers.' }
+                    { src: '../projet-stage/Brassage/infra-de-base.jpg', alt: 'Infrastructure de base', caption: 'État initial de l\'infrastructure avant intervention.' },
+                    { src: '../projet-stage/Brassage/baie-brassage.jpg', alt: 'Baie de brassage', caption: 'Préparation et organisation de la baie de brassage.' },
+                    { src: '../projet-stage/Brassage/brassage-equipement-restant.jpg', alt: 'Brassage des équipements restants', caption: 'Raccordement des derniers équipements réseau.' },
+                    { src: '../projet-stage/Brassage/brassge-cable-apparant.jpg', alt: 'Câble apparent', caption: 'Correction et reprise des passages de câbles apparents.' },
+                    { src: '../projet-stage/Brassage/Brassage-finit-complet.jpg', alt: 'Brassage final complet', caption: 'Résultat final après remise en forme complète du brassage.' }
                 ]
             }
         ]
@@ -100,17 +105,19 @@ const galleriesData = {
         description: 'Création et gestion de présence web et réseaux sociaux',
         projects: [
             {
-                name: 'LinkedIn',
-                description: 'Développement de la présence professionnelle sur LinkedIn',
+                name: 'Mes stages',
+                description: 'Dans le but de développer mon profil professionnel, j\'ai publié mes stages réalisés afin de renforcer ma visibilité auprès des entreprises concernées.',
                 images: [
-                    { src: '../assets/images/linkedin1.jpg', alt: 'LinkedIn 1' }
+                    { src: '../projet-stage/linkedin/experience-linkedin.png', alt: 'Expériences LinkedIn', caption: 'Publication des expériences de stage pour valoriser les missions réalisées.' },
+                    { src: '../projet-stage/linkedin/relation-linkedin.png', alt: 'Relations LinkedIn', caption: 'Développement du réseau professionnel grâce aux connexions et interactions.' }
                 ]
             },
             {
-                name: 'Portfolio',
-                description: 'Création et gestion d\'un portfolio en ligne',
+                name: 'Réalisation d\'une procédure',
+                description: 'Comme aucune procédure n\'existait pour la préparation des téléphones, je me suis chargé de la concevoir et de la formaliser.',
                 images: [
-                    { src: '../assets/images/portfolio1.jpg', alt: 'Portfolio 1' }
+                    { src: '../projet-stage/procédure/1.jpg', alt: 'Procédure - étape 1', caption: 'Structuration de la première partie de la procédure de préparation.' },
+                    { src: '../projet-stage/procédure/2.jpg', alt: 'Procédure - étape 2', caption: 'Finalisation de la procédure avec les étapes complètes et les contrôles.' }
                 ]
             }
         ]
@@ -120,34 +127,15 @@ const galleriesData = {
         description: 'Gestion de projets informatiques et collaboration d\'équipe',
         projects: [
             {
-                name: 'Migration système',
-                description: 'Migration vers un nouveau système d\'information',
+                name: 'Hackathon AIRBUS/RENAULT',
+                description: 'Une proposition de participer à un hackathon m\'a été faite, ce qui m\'a permis de comprendre comment les professionnels travaillent en mode projet.',
                 images: [
-                    { src: '../assets/images/projet1.jpg', alt: 'Migration 1' },
-                    { src: '../assets/images/projet2.jpg', alt: 'Migration 2' }
-                ]
-            },
-            {
-                name: 'Formation équipe',
-                description: 'Formation des équipes aux nouvelles méthodologies',
-                images: [
-                    { src: '../assets/images/projet3.jpg', alt: 'Formation 1' }
-                ]
-            },
-            {
-                name: 'Hackathon Hack4Scaria (Airbus / Renault)',
-                description: 'Participation au hackathon collaboratif pour développer des prototypes innovants',
-                images: [
-                    { src: '../assets/images/hackathon1.jpg', alt: 'Hackathon 1', caption: 'Atelier de conception avec les équipes Airbus et Renault.' },
-                    { src: '../assets/images/hackathon2.jpg', alt: 'Hackathon 2', caption: 'Présentation finale du projet devant les jurys.' }
-                ]
-            },
-            {
-                name: 'CTF cybersécurité CESI La Rochelle',
-                description: 'Épreuve de type capture the flag orientée cybersécurité',
-                images: [
-                    { src: '../assets/images/ctf1.jpg', alt: 'CTF 1', caption: 'Résolution de challenges réseau et exploitation.' },
-                    { src: '../assets/images/ctf2.jpg', alt: 'CTF 2', caption: 'Équipe en session de débogage et analyse de vulnérabilités.' }
+                    { src: '../projet-stage/hackathon/écran-autre-participant.jpg', alt: 'Écran autre participant', caption: 'Observation des autres équipes lors de la session.' },
+                    { src: '../projet-stage/hackathon/travail-postit.jpg', alt: 'Travail avec post-it', caption: 'Priorisation et organisation des tâches avec des post-it.' },
+                    { src: '../projet-stage/hackathon/session-travail.jpg', alt: 'Session de travail', caption: 'Travail collaboratif en équipe pendant le hackathon.' },
+                    { src: '../projet-stage/hackathon/guide.jpg', alt: 'Guide (à réorienter)', caption: 'Guide du hackathon — photo d\'une documentation (orientation corrigée à l\'affichage).', rotate: true },
+                    { src: '../projet-stage/hackathon/taille-guide.jpg', alt: 'Taille du guide', caption: 'Vue détaillée du guide distribué aux participants.' },
+                    { src: '../projet-stage/hackathon/photo-groupe-hack.jpg', alt: 'Photo de groupe', caption: 'Photo de l\'équipe et des participants à la clôture.' }
                 ]
             }
         ]
@@ -157,30 +145,61 @@ const galleriesData = {
         description: 'Déploiement et administration de services informatiques',
         projects: [
             {
-                name: 'Mise en place d\'un VPN',
-                description: 'Configuration et déploiement d\'un VPN pour télétravail sécurisé',
+                name: 'Préparation de poste pour client',
+                description: 'Préparation complète de postes de travail avec installation automatisée.',
                 images: [
-                    { src: '../projet-stage/VPN/vpn-setup-1.jpg', alt: 'VPN setup 1', caption: 'Déploiement des concentrateurs VPN et ouverture des ports nécessaires.' },
-                    { src: '../projet-stage/VPN/vpn-setup-2.jpg', alt: 'VPN setup 2', caption: 'Tests de connexion utilisateur et vérification de la sécurité.' }
+                    { src: '../projet-stage/Préparation-postes/pc-prépa.jpg', alt: 'PC à préparer', caption: 'Poste prêt à être déployé chez le client avant l’installation finale.' },
+                    { src: '../projet-stage/Préparation-postes/install-windows-neuf.jpg', alt: 'Installation Windows neuve', caption: 'Installation de Windows 11 Pro à partir d’une clé dédiée et d’un script d’automatisation.' },
+                    { src: '../projet-stage/Préparation-postes/script-execution.jpg', alt: 'Exécution du script', caption: 'Le script poursuit l’installation automatisée des applications utiles.' },
+                    { src: '../projet-stage/Préparation-postes/script-install.jpg', alt: 'Script d’installation', caption: 'Script PowerShell utilisé pour automatiser l’installation logicielle.' },
+                    { src: '../projet-stage/Préparation-postes/maj-windows.jpg', alt: 'Mises à jour Windows', caption: 'Application des mises à jour Windows pour livrer des postes à jour.' },
+                    { src: '../projet-stage/Préparation-postes/maj-BIOS.jpg', alt: 'Mise à jour du BIOS', caption: 'Mise à jour du BIOS pour garantir stabilité et compatibilité.' },
+                    { src: '../projet-stage/Préparation-postes/maj-driver.jpg', alt: 'Mise à jour des pilotes', caption: 'Installation des dernières versions de pilotes matériels.' }
                 ]
             },
             {
-                name: 'configurer un switch avec plusieurs VLAN',
-                description: 'configurer un switch avec plusieurs VLAN',
+                name: 'Synchronisation entre deux logiciels',
+                description: 'Synchronisation des évènements entre l’application Outlook et ClickUp.',
                 images: [
-                    { src: '../projet-stage/VLAN/switch.jpg', alt: 'switch', caption: 'photo du switch une fois déballé et branché' },
-                    { src: '../projet-stage/VLAN/Plan-vlan.jpg', alt: 'plan-vlan', caption: 'configuration demandés par le client des différents VLAN' },
-                    { src: '../projet-stage/VLAN/trouver-adresse-switch.jpg', alt: 'trouver-adresse-switch', caption: 'utiliser l\'outil Advanced ip scanner pour retrouver l\'adresse ip forunit en DHCP du switch' },
-                    { src: '../projet-stage/VLAN/config-du-vlan.jpg', alt: 'config-du-vlan', caption: 'mapper tous les ports qui votn aux différents VLAN' },
-                    { src: '../projet-stage/VLAN/test-connectic.jpg', alt: 'test-connectic', caption: 'test de connection entre deux machines présentes dans le même VLAN' }
+                    { src: '../projet-stage/synchronisation/partie-déjà-faite.png', alt: 'Partie déjà faite', caption: 'Première étape déjà réalisée pour préparer la synchronisation entre les deux outils.' },
+                    { src: '../projet-stage/synchronisation/Première-version-Outlook.png', alt: 'Première version Outlook', caption: 'Première version du flux de synchronisation depuis Outlook.' },
+                    { src: '../projet-stage/synchronisation/Exemple-recupération-données.png', alt: 'Exemple de récupération des données', caption: 'Exemple de récupération des données avant traitement et envoi vers ClickUp.' },
+                    { src: '../projet-stage/synchronisation/Toute-fonctionnalités_cu-vers-Out.png', alt: 'Fonctionnalités ClickUp vers Outlook', caption: 'Vue d’ensemble des fonctionnalités de synchronisation de ClickUp vers Outlook.' },
+                    { src: '../projet-stage/synchronisation/correction-des-éléments.png', alt: 'Correction des éléments', caption: 'Correction des éléments pour fiabiliser les échanges entre les deux logiciels.' },
+                    { src: '../projet-stage/synchronisation/Outlook-vers-cu-v2.png', alt: 'Outlook vers ClickUp v2', caption: 'Version améliorée de la synchronisation d’Outlook vers ClickUp.' },
+                    { src: '../projet-stage/synchronisation/réussite-test.png', alt: 'Réussite du test', caption: 'Validation finale du fonctionnement attendu lors des tests.' },
+                    { src: '../projet-stage/synchronisation/Réception-mail.png', alt: 'Réception du mail', caption: 'Réception du mail confirmant le bon déroulement de la synchronisation.' }
                 ]
             },
             {
-                name: 'Mise en place d\'imprimantes',
-                description: 'Installation et partage des imprimantes sur le réseau',
+                name: 'Préparation de téléphones',
+                description: 'Préparation de téléphones pour le client AMEL, chantier naval.',
                 images: [
-                    { src: '../projet-stage/imprimante/imprimante-1.jpg', alt: 'Imprimante 1', caption: 'Installation physique et connexion réseau des imprimantes.' },
-                    { src: '../projet-stage/imprimante/imprimante-2.jpg', alt: 'Imprimante 2', caption: 'Configuration des pilotes et tests d\'impression.' }
+                    { src: '../projet-stage/téléphones/liste-prépa.png', alt: 'Liste de préparation', caption: 'Liste de préparation utilisée pour organiser les téléphones à configurer.' },
+                    { src: '../projet-stage/téléphones/liste-tel.png', alt: 'Liste des téléphones', caption: 'Inventaire des téléphones à traiter pour la préparation initiale.' },
+                    { src: '../projet-stage/téléphones/dashboard-full-tel.png', alt: 'Dashboard complet', caption: 'Tableau de bord complet pour suivre l’avancement de la préparation.' },
+                    { src: '../projet-stage/téléphones/exemple-prépa.png', alt: 'Exemple de préparation', caption: 'Exemple d’une préparation terminée avec les contrôles effectués.' },
+                    { src: '../projet-stage/téléphones/excel-info.png', alt: 'Informations Excel', caption: 'Fichier Excel regroupant les informations utiles pour chaque appareil.' }
+                ]
+            },
+            {
+                name: 'Installation d\'un VPN site à site',
+                description: 'Dans le besoin d’accéder à des ressources à distance, un VPN de site à site est la solution.',
+                images: [
+                    { src: '../projet-stage/VPN/sophos-fw.jpg', alt: 'Pare-feu Sophos', caption: 'Mise en place du pare-feu Sophos pour sécuriser le tunnel site à site.' },
+                    { src: '../projet-stage/VPN/test-vpn.jpg', alt: 'Test du VPN', caption: 'Test de fonctionnement pour vérifier la connexion entre les deux sites.' },
+                    { src: '../projet-stage/VPN/install-sophos.jpg', alt: 'Installation Sophos', caption: 'Installation et configuration initiale de la solution Sophos.' }
+                ]
+            },
+            {
+                name: 'Préparation de VLAN',
+                description: 'Un nouveau switch a été reçu et des VLAN devaient être configurés.',
+                images: [
+                    { src: '../projet-stage/VLAN/switch.jpg', alt: 'Switch', caption: 'Nouveau switch déballé et prêt pour la configuration.' },
+                    { src: '../projet-stage/VLAN/Plan-vlan.jpg', alt: 'Plan des VLAN', caption: 'Plan de configuration des différents VLAN demandés.' },
+                    { src: '../projet-stage/VLAN/trouver-adresse-switch.jpg', alt: 'Recherche de l’adresse du switch', caption: 'Recherche de l’adresse IP du switch attribuée en DHCP.' },
+                    { src: '../projet-stage/VLAN/config-du-vlan.jpg', alt: 'Configuration des VLAN', caption: 'Affectation des ports aux différents VLAN selon le plan prévu.' },
+                    { src: '../projet-stage/VLAN/test-connectic.jpg', alt: 'Test de connectivité', caption: 'Test de communication entre deux machines placées dans le même VLAN.' }
                 ]
             }
         ]
@@ -188,23 +207,7 @@ const galleriesData = {
     developpement: {
         title: 'Organiser son développement professionnel',
         description: 'Formation continue et développement des compétences',
-        projects: [
-            {
-                name: 'Plan de formation',
-                description: 'Établissement d\'un plan de développement professionnel',
-                images: [
-                    { src: '../assets/images/dev1.jpg', alt: 'Formation 1' },
-                    { src: '../assets/images/dev2.jpg', alt: 'Formation 2' }
-                ]
-            },
-            {
-                name: 'Certification technique',
-                description: 'Obtention de certifications informatiques',
-                images: [
-                    { src: '../assets/images/dev3.jpg', alt: 'Certification 1' }
-                ]
-            }
-        ]
+        projects: []
     }
 };
 
@@ -388,8 +391,16 @@ function updateGalleryImage() {
     if (!project) return;
     
     const imageEl = document.getElementById('galleryImage');
-    imageEl.src = project.images[currentImageIndex].src;
-    imageEl.alt = project.images[currentImageIndex].alt;
+    const imgObj = project.images[currentImageIndex];
+    imageEl.src = imgObj.src;
+    imageEl.alt = imgObj.alt || '';
+
+    // Appliquer une classe pour corriger l'orientation si nécessaire
+    if (imgObj.rotate) {
+        imageEl.classList.add('rotate-correct');
+    } else {
+        imageEl.classList.remove('rotate-correct');
+    }
     
     // Mettre à jour les indicateurs
     const indicators = document.querySelectorAll('.gallery-indicator');
