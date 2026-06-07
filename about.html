@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos de Moi</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="../index.html" class="nav-link">Accueil</a></li>
+            <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+            <li><a href="parcours.html" class="nav-link">Parcours</a></li>
+            <li><a href="fichiers.html" class="nav-link">Fichiers</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="portfolio-section">
+            <h2 class="section-title">À Propos de Moi</h2>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; margin-top: 3rem;">
+                <!-- Texte -->
+                <div>
+                    <h3 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.3rem;">Qui suis-je ?</h3>
+                    <p style="margin-bottom: 1rem; color: var(--secondary); line-height: 1.8;">
+                        Je suis Robin BARBAT-PATINAUD, un administrateur réseau et systèmes passionné actuellement en formation BTS SIO spécialité SISR (Solutions d''Infrastructures Sécurisées).
+                        Depuis mon plus jeune âge, j''ai été fasciné par les infrastructures IT et leur capacité à supporter des services critiques.
+                    </p>
+                    <p style="margin-bottom: 1rem; color: var(--secondary); line-height: 1.8;">
+                        Autodidacte et curieux de nature, je maîtrise les architectures réseaux complexes, la virtualisation d''infrastructure et l''administration système.
+                        Je me spécialise progressivement en cybersécurité, domaine qui me captive par ses défis techniques et ses enjeux cruciaux pour la protection des données.
+                    </p>
+                    <p style="margin-bottom: 1rem; color: var(--secondary); line-height: 1.8;">
+                        Ma force réside dans ma capacité à diagnostiquer et résoudre les problèmes complexes d''infrastructure.
+                        J''aime travailler en équipe, optimiser la performance des réseaux et mettre en place des solutions sécurisées pour protéger les données critiques.
+                    </p>
+                </div>
+
+                <!-- Stats ou Image -->
+                <div style="background-color: var(--border); padding: 2rem; border-radius: 12px; border: 1px solid rgba(108, 92, 231, 0.2);">
+                    <h3 style="color: var(--accent); margin-bottom: 1.5rem; text-align: center;">Ma Progression</h3>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span>Réseaux (TCP/IP, Cisco)</span>
+                                <span style="color: var(--accent);">90%</span>
+                            </div>
+                            <div style="background-color: var(--primary); border-radius: 10px; overflow: hidden; height: 10px;">
+                                <div style="background: linear-gradient(90deg, var(--accent), var(--accent-light)); height: 100%; width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span>Systèmes (Linux, Windows)</span>
+                                <span style="color: var(--accent);">85%</span>
+                            </div>
+                            <div style="background-color: var(--primary); border-radius: 10px; overflow: hidden; height: 10px;">
+                                <div style="background: linear-gradient(90deg, var(--accent), var(--accent-light)); height: 100%; width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span>Virtualisation (Proxmox, VMware)</span>
+                                <span style="color: var(--accent);">75%</span>
+                            </div>
+                            <div style="background-color: var(--primary); border-radius: 10px; overflow: hidden; height: 10px;">
+                                <div style="background: linear-gradient(90deg, var(--accent), var(--accent-light)); height: 100%; width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span>Cybersécurité</span>
+                                <span style="color: var(--danger);">80%</span>
+                            </div>
+                            <div style="background-color: var(--primary); border-radius: 10px; overflow: hidden; height: 10px;">
+                                <div style="background: linear-gradient(90deg, var(--danger), var(--accent)); height: 100%; width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span>Monitoring & Sécurité</span>
+                                <span style="color: var(--accent);">80%</span>
+                            </div>
+                            <div style="background-color: var(--primary); border-radius: 10px; overflow: hidden; height: 10px;">
+                                <div style="background: linear-gradient(90deg, var(--accent), var(--accent-light)); height: 100%; width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Parcours -->
+            <div style="margin-top: 4rem; padding-top: 3rem; border-top: 2px solid var(--border);">
+                <h3 style="color: var(--accent); margin-bottom: 2rem; font-size: 1.4rem;">Mon Évolution</h3>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                    <div style="background-color: var(--border); padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--accent);">
+                        <h4 style="color: var(--accent); margin-bottom: 0.5rem;">2020 - Découverte</h4>
+                        <p style="color: var(--secondary); line-height: 1.6; font-size: 0.95rem;">
+                            Commencement de mon apprentissage autodidacte en informatique et découverte de ma passion pour les réseaux et systèmes.
+                        </p>
+                    </div>
+                    <div style="background-color: var(--border); padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--accent);">
+                        <h4 style="color: var(--accent); margin-bottom: 0.5rem;">2022 - Formation</h4>
+                        <p style="color: var(--secondary); line-height: 1.6; font-size: 0.95rem;">
+                            Intégration du BTS SIO spécialité SISR. Apprentissage systématique des infrastructures IT, virtualisation et administration.
+                        </p>
+                    </div>
+                    <div style="background-color: var(--border); padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--danger);">
+                        <h4 style="color: var(--danger); margin-bottom: 0.5rem;">2024 - Professionalisation</h4>
+                        <p style="color: var(--secondary); line-height: 1.6; font-size: 0.95rem;">
+                            Stages professionnels en infrastructure IT et cybersécurité. Expérience concrète de sécurisation d''infrastructures critiques.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Robin BARBAT-PATINAUD. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
